@@ -31,6 +31,8 @@ public class CoralPlanting : MonoBehaviour
     private List<GameObject> plantedCorals = new List<GameObject>();
 
     public CoralPlantingProgressTracker progressTracker;
+    public ProgressInfo progressInfo;
+    public int sceneLoad;
 
     private void Start()
     {
@@ -143,6 +145,7 @@ public class CoralPlanting : MonoBehaviour
 
         plantedCorals.Add(newCoral);
         plantedCoralCount++;
+        progressInfo.AddCoralProgress(sceneLoad, 1, maxCoralCount);
         if (progressTracker != null)
         {
             progressTracker.IncrementCoral();
