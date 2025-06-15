@@ -366,7 +366,14 @@ MonoBehaviour:
   glowTargets:
   - {fileID: 324790196}
   - {fileID: 598349149}
+  mainMonitor: {fileID: 176999887}
   sceneToLoad: Environment3
+  environmentTexture: {fileID: 2800000, guid: 3f0f9cdb2c3e17f9e8062b1e14ee20b0, type: 3}
+  noSignalTexture: {fileID: 2800000, guid: acef42c800e2afd4c86b29c8511b083f, type: 3}
+  planeToScale: {fileID: 441116149}
+  targetScale: {x: 0.6, y: 1, z: 0.6}
+  scaleDuration: 1
+  easePower: 3
 --- !u!4 &91271907
 Transform:
   m_ObjectHideFlags: 0
@@ -1140,7 +1147,14 @@ MonoBehaviour:
   glowTargets:
   - {fileID: 324790196}
   - {fileID: 598349149}
+  mainMonitor: {fileID: 176999887}
   sceneToLoad: Environment1
+  environmentTexture: {fileID: 2800000, guid: ab9ceb9fcba41c9ea95f10b9d507d678, type: 3}
+  noSignalTexture: {fileID: 2800000, guid: acef42c800e2afd4c86b29c8511b083f, type: 3}
+  planeToScale: {fileID: 1769009194}
+  targetScale: {x: 0.6, y: 1, z: 0.6}
+  scaleDuration: 1
+  easePower: 3
 --- !u!135 &548702490
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4125,7 +4139,14 @@ MonoBehaviour:
   glowTargets:
   - {fileID: 324790196}
   - {fileID: 598349149}
+  mainMonitor: {fileID: 176999887}
   sceneToLoad: Environment2
+  environmentTexture: {fileID: 2800000, guid: 0c98571061e2ae37f855514d1b04f501, type: 3}
+  noSignalTexture: {fileID: 2800000, guid: acef42c800e2afd4c86b29c8511b083f, type: 3}
+  planeToScale: {fileID: 1468682626}
+  targetScale: {x: 0.6, y: 1, z: 0.6}
+  scaleDuration: 1
+  easePower: 3
 --- !u!4 &2106143477
 Transform:
   m_ObjectHideFlags: 0

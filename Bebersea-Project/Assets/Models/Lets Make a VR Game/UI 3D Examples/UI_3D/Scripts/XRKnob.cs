@@ -118,6 +118,13 @@ namespace UnityEngine.XR.Content.Interaction
         [Tooltip("Events to trigger when the knob is rotated")]
         ValueChangeEvent m_OnValueChange = new ValueChangeEvent();
 
+        [SerializeField]
+        bool m_ResetOnRelease = false;
+        [SerializeField]
+        float m_ResetValue = 0.5f;
+        [SerializeField]
+        float m_ResetDuration = 0.5f;
+
         UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor m_Interactor;
 
         bool m_PositionDriven = false;
@@ -227,7 +234,29 @@ namespace UnityEngine.XR.Content.Interaction
         void EndGrab(SelectExitEventArgs args)
         {
             m_Interactor = null;
+
+            if (m_ResetOnRelease)
+            {
+                StartCoroutine(SmoothReset());
+            }
         }
+
+        System.Collections.IEnumerator SmoothReset()
+        {
+            float startValue = m_Value;
+            float elapsed = 0f;
+
+            while (elapsed < m_ResetDuration)
+            {
+                elapsed += Time.deltaTime;
+                float t = elapsed / m_ResetDuration;
+                value = Mathf.Lerp(startValue, m_ResetValue, t);
+                yield return null;
+            }
+
+            value = m_ResetValue;
+        }
+
 
         public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
         {
