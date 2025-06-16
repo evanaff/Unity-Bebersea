@@ -15,7 +15,10 @@ MonoBehaviour:
   environments:
   - trashCollected: 100
     coralPlanted: 100
+    animalInteracted: 0
   - trashCollected: 100
     coralPlanted: 100
+    animalInteracted: 0
   - trashCollected: 100
     coralPlanted: 100
+    animalInteracted: 0
